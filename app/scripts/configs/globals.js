@@ -5,4 +5,6 @@ const GLOBALS = {
   PIXI,
 };
 
+window.PIXI = PIXI;
+
 export default GLOBALS;

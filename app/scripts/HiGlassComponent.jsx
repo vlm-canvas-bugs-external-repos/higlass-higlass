@@ -525,6 +525,7 @@ class HiGlassComponent extends React.Component {
       } else {
         this.pixiRenderer = new GLOBALS.PIXI.WebGLRenderer(rendererOptions);
       }
+
     } else {
       if (versionNumber < 4) {
         console.warn(
@@ -539,6 +540,10 @@ class HiGlassComponent extends React.Component {
         this.pixiRenderer = new GLOBALS.PIXI.Renderer(rendererOptions);
       }
     }
+
+    this.stage = this.pixiStage;
+    this.renderer = this.pixiRenderer;
+    window.__PIXI_APP__ = this;
 
     // PIXI.RESOLUTION=2;
     this.fitPixiToParentContainer();
